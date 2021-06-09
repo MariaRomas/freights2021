@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="page-block">
+<section>
+    <div class="container" style="margin-bottom:40px">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header text-black">
+              <h2>Регистрация перевозчика</h2>
+            </div>
+            <div class="card-body">
+                <form action="{% url 'driver_register' %}" method="POST" novalidate>
+                  {% csrf_token %}
+                     {% for field in form.visible_fields %}
+                       <div class="form-group">
+                           {{ field.label_tag }}
+                              {% render_field field class="form-control" %}
+                                {% for error in field.errors %}
+                                  <span style="color:red">{{ error }}</span>
+                                {% endfor %}
+                     {% endfor %}
+                         <input type="submit" value="Отправить" class="btn btn-block btn-primary">
+                       </div>
+                </form>
+             </div>
+                </div>   
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+</div>
+  {% endblock content %}

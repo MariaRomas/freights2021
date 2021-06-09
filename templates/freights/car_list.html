@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+    <div id="page"  class="page">
+    {%include 'include/header.html'%}
+    </div>
+{% block content%}
+{% block cars %}
+<div class="page-block">
+    <h3 style="text-align: center;">Авто</h3>
+       
+            {% for car in car_list %}
+           <div class="cars">
+            <h4> {{ car.title2 }}<span>- {{ car.driver}} </span></h4> 
+            <p>{{car.category}}</p>
+            <hr>
+            <p class="editContent" style="outline: none; cursor: inherit; width:100%">{{car.description|safe}}</p>
+                        
+           </div>
+          
+            {% endfor %}
+       
+</div>
+{% endblock cars %}
+{% endblock content%}

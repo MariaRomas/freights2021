@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+    <div id="page"  class="page">
+    {%include 'include/header.html'%}
+    </div>
+{% block content%}
+{% block news %}
+<div class="page-block">
+    <h3 style="text-align: center;">Новости</h3>
+       
+            {% for news in news_list %}
+            <div class="news">
+                <img src="{{ news.image.url }}" class="img-fluid" alt="">
+                <h4> {{ news.title3 }}</h4>
+                <a type="button" style="background-color:#006551; color:#fff; max-width:300px " class="btn btng btn-block" href="{{ news.get_absolute_url }}">Подробнее</a>
+    
+            </div> 
+            <hr>
+            {% endfor %}
+       
+</div>
+{% endblock news %}
+{% endblock content%}

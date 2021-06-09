@@ -1,0 +1,13 @@
+<div class="deal-leftmk left-side">
+    <h3 class="sear-head editContent" style="margin-top:20px">Последние добавленные</h3>
+    {%for freight in last_freights%}
+    <div class="special-sec1 row mt-3 editContent">
+       
+        <div class="img-deal1  col-md-8">
+            
+            <a href="{{freight.get_absolute_url}}" style="margin-left: 20px;" class="editContent" >{{freight.title}}</a>
+        </div>
+
+    </div>
+    {%endfor%}
+</div>

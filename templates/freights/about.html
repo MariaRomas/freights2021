@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+    <div id="page"  class="page">
+    {%include 'include/header.html'%}
+    </div>
+{% block content%}
+<div class="page-block">
+    <h3 style="text-align: center;">О нас</h3>
+    <div  class="about-block">
+	    <div class="col-md-6 text" >
+          
+                <p>Автоматизированная система поиска грузов для транспортных компаний - удобная площадка для участников сферы автомобильных грузоперевозок.
+                    Здесь вы можете найти подходящую заявку и надежного грузоперевозчика.  
+                    Зарегистрируйтесь на сайте и получите 6 месяцев бесплатного использования сервиса!
+                </p>
+                <p>Работа является Выпускной квалификационной работой студента Московского политехнического университета Федосеевой Марии.</p>
+        </div>
+        <div style="max-width:500px; width:100%">
+            <img  class="img-fluid" src="/static/images/truck1.jpg" alt=""   >
+        </div>
+    </div> 
+    <h3 style="text-align: center;">Часто задаваемые вопросы</h3> 
+    <div class="accordion accordion-flush" style="max-width:900px; margin:0 auto" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Как добавить грузоперевозку?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">ТЕКСТ</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Как создать сделку?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">ТЕКСТ</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Как отправить запрос?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">ТЕКСТ</div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock content%}

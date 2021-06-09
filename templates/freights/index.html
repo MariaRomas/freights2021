@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+<div id="page"  class="page">
+   
+    {%include 'include/header.html'%}
+
+  </div>
+
+{% block content%}
+<div style="background: url(/static/images/truck.jpg) no-repeat center; padding-bottom: 10%;">
+  <div class="banner-info">
+    <p class="editContent" >ВКР</p>
+    <h3 class="mb-4 editContent">Биржа грузоперевозок</h3>
+      <div class="ban-buttons">
+        <a type="button" style="background-color:#006551; color:#fff; width:50%" class="btn btng btn-block" href="{% url 'freights' %}">Найти груз</a>
+    
+      </div>
+  </div>
+</div>
+<div  class="about-block">
+	  <div style="max-width:500px; width:100%">
+    <img  class="img-fluid" src="/static/images/truck1.jpg" alt=""   >
+    </div>
+    <div class="col-md-6 text" style="margin-left: 40px;">
+      <h3>О нас</h3>
+      <p>
+         Система поиска грузоперевозок - удобная площадка для участников сферы автомобильных грузоперевозок.
+         Здесь вы можете найти подходящую заявку и надежного грузоперевозчика. 
+      
+    
+     
+     
+      Зарегистрируйтесь на сайте и получите 6 месяцев бесплатного использования сервиса!
+   </p>
+      
+        <a type="button" style="background-color:#006551; color:#fff; max-width:300px " class="btn btng btn-block" href="{% url 'freights' %}">Узнать больше</a>
+    
+         
+       </div>
+  </div>  
+  <div class="about-block">
+  <div class="col-md-5">
+  <article class="block-button card" style="padding: 100px;">
+    <a type="button" style="background-color:#006551; color:#fff; " class="btn btng btn-block" href="{% url 'freights' %}">Поиск грузов</a>
+    
+  </article></div>
+
+  <div class="col-md-5">
+    <article class="card block-button" style="padding: 100px;
+   ">
+      <a type="button" style="background-color:#006551; color:#fff; " class="btn btng btn-block" href="{% url 'cars' %}">Поиск авто</a>
+    
+    </article></div></div>
+{% endblock content%}

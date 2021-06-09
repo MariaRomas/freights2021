@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-block">
+<section>
+    <div class="container" style="margin-bottom: 40px;">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+          <div class="card">
+            
+            <div class="card-body">
+                <div class="row">
+                   <div class="col-lg-7">
+                    <a type="button" class="btn btng btn-block" href="{% url 'customer_register' %}">Я - грузовладелец</a>
+                   </div>
+                   <div class="col-lg-5">
+                    <a type="button" class="btn btng btn-block" href="{% url 'driver_register' %}">Я - перевозчик</a>
+                   </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  {% endblock content %}

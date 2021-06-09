@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+    <div id="page"  class="page">
+    {%include 'include/header.html'%}
+    </div>
+{% block content%}
+{% block news %}
+<div class="page-block">
+<div class="news">
+    <img src="{{ news.image.url }}" class="img-fluid" alt="">
+    <h4> {{ news.title3 }}</h4>
+    <p class="editContent" style="outline: none; cursor: inherit; width:100%">{{news.text|safe}}</p>
+   
+</div> 
+<hr>
+<script src="https://yastatic.net/share2/share.js"></script>
+<div style="text-align: right;
+max-width: 1000px;
+margin-bottom: 40px;" class="ya-share2" data-curtain data-color-scheme="whiteblack" data-services="vkontakte,facebook,telegram"></div>
+</div>
+
+            {% endblock news %}
+            {% endblock content%}
+  

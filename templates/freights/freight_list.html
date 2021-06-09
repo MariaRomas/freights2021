@@ -1,0 +1,43 @@
+{% extends 'freights/base.html' %}
+{% load freight_tag%}
+{% block title %} {% endblock title %}
+{% block header %} bg1 {% endblock header %}
+{% block freight %}
+    <div class="left-ads-display col-lg-9" style="margin-top:40px" >
+       
+        <div class="row">
+            {% for freight in freight_list %}
+         
+                <div class="col-md-4 product-men" >
+                    <div class="product-shoe-info editContent text-center mt-lg-4" style="box-shadow: 4px 4px 1px rgba(0,0,0,0.6);" >
+                       
+                        <div class="item-info-product" >
+                            <h4 class="">
+                                <a style="text-decoration:underline;" href="{{ freight.get_absolute_url }}"
+                                   class="editContent">
+                                    {{ freight.title }}
+                                </a> <br/>
+                                {{freight.city1 }}-{{freight.city2}} 
+                                <br/>
+                               
+
+                            </h4>
+                            <p> {{freight.weight }} т</p>
+                            <p> {{freight.author.get_full_name }}</p>
+                            <div class="product_price" style="border-top:2px solid #006551">
+                                <div class="grid-price">
+                                    <span class="money editContent">{{freight.sum}} руб.</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            {% endfor %}
+        </div>
+        <div class="grid-img-right mt-4 text-right bg bg1" >
+            {% include 'include/pagination.html' %}
+        </div>
+    </div>
+{% endblock freight %}
